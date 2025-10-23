@@ -1,110 +1,296 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Cakebox Temuco — Pastelería artesanal y café de especialidad">
 	<title>Cakebox Temuco</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						cream: '#FFF8F0',
+						coffee: '#6B4423',
+						'coffee-light': '#8B6239',
+						'coffee-dark': '#4A2C1A',
+						accent: '#D4A574',
+						'accent-light': '#E8C9A3',
+					},
+					fontFamily: {
+						sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+					}
+				}
+			}
+		}
+	</script>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<style type="text/tailwindcss">
+		@layer base {
+			body {
+				font-family: 'Inter', system-ui, sans-serif;
+			}
+			h1, h2, h3, h4 {
+				font-family: 'Playfair Display', serif;
+			}
+		}
+	</style>
 </head>
-<body>
-	<header>
-		<div>
-			<img src="/assets/img/ChatGPT Image 23 oct 2025, 12_35_13 a.m..png" alt="Logo Cakebox Temuco - Pastelería y Cafetería">
-			<h1>Cakebox Temuco</h1>
-			<p>Pastelería artesanal y café de especialidad</p>
+<body class="bg-cream text-gray-800 antialiased">
+	<!-- Header -->
+	<header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between py-4">
+				<!-- Logo y Título -->
+				<div class="flex items-center gap-4">
+					<img src="/assets/img/ChatGPT Image 23 oct 2025, 12_35_13 a.m..png" alt="Logo Cakebox Temuco" class="h-12 w-12 object-contain">
+					<div>
+						<h1 class="text-2xl font-bold text-coffee">Cakebox Temuco</h1>
+						<p class="text-xs text-gray-600 hidden sm:block">Pastelería artesanal y café de especialidad</p>
+					</div>
+				</div>
+				
+				<!-- Navigation -->
+				<nav>
+					<ul class="flex items-center gap-6 lg:gap-8">
+						<li><a href="#menu" class="text-sm font-medium text-gray-700 hover:text-coffee transition-colors duration-200">Menú</a></li>
+						<li><a href="#ubicacion" class="text-sm font-medium text-gray-700 hover:text-coffee transition-colors duration-200">Ubicación</a></li>
+						<li><a href="https://instagram.com/cakebox_temuco" target="_blank" rel="noopener" class="text-sm font-medium text-accent hover:text-coffee-light transition-colors duration-200">@cakebox_temuco</a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
-		<nav>
-			<ul>
-				<li><a href="#menu">Menú</a></li>
-				<li><a href="#ubicacion">Ubicación</a></li>
-				<li><a href="https://instagram.com/cakebox_temuco" target="_blank" rel="noopener">@cakebox_temuco</a></li>
-			</ul>
-		</nav>
 	</header>
 
-	<main>
+	<main class="pt-20">
 		<!-- Hero Section -->
-		<section>
-			<div>
-				<h2>Sabores que inspiran momentos</h2>
-				<p>Pastelería hecha con ingredientes seleccionados y café de especialidad — un refugio moderno y acogedor en Temuco.</p>
-				
-				<div>
-					<a href="#menu">Ver Menú</a>
-					<a href="#ubicacion">Cómo Llegar</a>
-					<a href="https://instagram.com/cakebox_temuco" target="_blank" rel="noopener">Instagram</a>
+		<section class="min-h-[90vh] flex items-center bg-gradient-to-br from-cream via-white to-accent-light/20">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+				<div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+					<!-- Contenido -->
+					<div class="space-y-8">
+						<div class="space-y-4">
+							<h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-coffee-dark leading-tight">
+								Sabores que inspiran <span class="text-accent">momentos</span>
+							</h2>
+							<p class="text-lg sm:text-xl text-gray-700 leading-relaxed max-w-xl">
+								Pastelería hecha con ingredientes seleccionados y café de especialidad — un refugio moderno y acogedor en Temuco.
+							</p>
+						</div>
+						
+						<div class="flex flex-wrap gap-4">
+							<a href="#menu" class="px-8 py-3 bg-coffee text-white rounded-full font-medium hover:bg-coffee-dark transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+								Ver Menú
+							</a>
+							<a href="#ubicacion" class="px-8 py-3 bg-white text-coffee border-2 border-coffee rounded-full font-medium hover:bg-coffee hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+								Cómo Llegar
+							</a>
+							<a href="https://instagram.com/cakebox_temuco" target="_blank" rel="noopener" class="px-8 py-3 bg-accent text-white rounded-full font-medium hover:bg-coffee-light transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+								Instagram
+							</a>
+						</div>
+					</div>
+					
+					<!-- Imagen -->
+					<div class="relative">
+						<div class="aspect-square rounded-3xl shadow-2xl overflow-hidden">
+							<img src="/assets/img/ChatGPT Image 23 oct 2025, 12_35_13 a.m..png" alt="Productos artesanales de Cakebox Temuco" class="w-full h-full object-cover">
+						</div>
+						<!-- Decoración -->
+						<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-coffee/10 rounded-full blur-3xl -z-10"></div>
+						<div class="absolute -top-6 -left-6 w-40 h-40 bg-accent/20 rounded-full blur-3xl -z-10"></div>
+					</div>
 				</div>
-			</div>
-			
-			<div>
-				<!-- Placeholder para imagen de producto -->
-				<p>Imagen de producto</p>
 			</div>
 		</section>
 
 		<!-- Menú / Productos -->
-		<section id="menu">
-			<h3>Nuestros destacados</h3>
-			<p>Una selección representativa de nuestras categorías. Pregunta por elaboraciones especiales en tienda.</p>
-			
-			<div>
-				<article>
-					<h4>Tortas</h4>
-					<p>Tortas artesanales para ocasiones o por porción — sabores clásicos y contemporáneos.</p>
-				</article>
+		<section id="menu" class="py-20 lg:py-32 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<!-- Encabezado de Sección -->
+				<div class="text-center max-w-3xl mx-auto mb-16">
+					<h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-coffee-dark mb-4">
+						Nuestros destacados
+					</h3>
+					<p class="text-lg text-gray-600">
+						Una selección representativa de nuestras categorías. Pregunta por elaboraciones especiales en tienda.
+					</p>
+				</div>
 				
-				<article>
-					<h4>Cafetería</h4>
-					<p>Café de especialidad, bebidas de autor y preparaciones perfectas para acompañar tus postres.</p>
-				</article>
+				<!-- Grid de Productos -->
+				<div class="grid md:grid-cols-3 gap-8 lg:gap-10 mb-12">
+					<article class="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+						<!-- Imagen -->
+						<div class="aspect-[4/3] overflow-hidden">
+							<img src="/assets/img/fahmi-fakhrudin-nzyzAUsbV0M-unsplash.jpg" alt="Tortas artesanales Cakebox" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+						</div>
+						<!-- Contenido -->
+						<div class="p-8">
+							<div class="w-16 h-16 bg-coffee rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 -mt-16 relative shadow-lg">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+								</svg>
+							</div>
+							<h4 class="text-2xl font-bold text-coffee mb-3">Tortas</h4>
+							<p class="text-gray-600 leading-relaxed">
+								Tortas artesanales para ocasiones o por porción — sabores clásicos y contemporáneos.
+							</p>
+						</div>
+					</article>
+					
+					<article class="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+						<!-- Imagen -->
+						<div class="aspect-[4/3] overflow-hidden">
+							<img src="/assets/img/anthony-espinosa-6iqpLKqeaE0-unsplash.jpg" alt="Café de especialidad Cakebox" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+						</div>
+						<!-- Contenido -->
+						<div class="p-8">
+							<div class="w-16 h-16 bg-coffee rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 -mt-16 relative shadow-lg">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+								</svg>
+							</div>
+							<h4 class="text-2xl font-bold text-coffee mb-3">Cafetería</h4>
+							<p class="text-gray-600 leading-relaxed">
+								Café de especialidad, bebidas de autor y preparaciones perfectas para acompañar tus postres.
+							</p>
+						</div>
+					</article>
+					
+					<article class="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+						<!-- Imagen -->
+						<div class="aspect-[4/3] overflow-hidden">
+							<img src="/assets/img/12photostory-UAtbg1lfos8-unsplash.jpg" alt="Decoraciones personalizadas Cakebox" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+						</div>
+						<!-- Contenido -->
+						<div class="p-8">
+							<div class="w-16 h-16 bg-coffee rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 -mt-16 relative shadow-lg">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+								</svg>
+							</div>
+							<h4 class="text-2xl font-bold text-coffee mb-3">Decoraciones</h4>
+							<p class="text-gray-600 leading-relaxed">
+								Decoraciones personalizadas y detalles que elevan cada producto.
+							</p>
+						</div>
+					</article>
+				</div>
 				
-				<article>
-					<h4>Decoraciones</h4>
-					<p>Decoraciones personalizadas y detalles que elevan cada producto.</p>
-				</article>
-			</div>
-			
-			<div>
-				<a href="#ubicacion">Reservar / Consultar</a>
-				<a href="#menu">Ver más</a>
+				<!-- Botones de Acción -->
+				<div class="flex flex-wrap justify-center gap-4">
+					<a href="#ubicacion" class="px-8 py-3 bg-coffee text-white rounded-full font-medium hover:bg-coffee-dark transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+						Reservar / Consultar
+					</a>
+					<a href="#menu" class="px-8 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent-light hover:text-coffee transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+						Ver más
+					</a>
+				</div>
 			</div>
 		</section>
 
 		<!-- Ubicación -->
-		<section id="ubicacion">
-			<h3>Ubicación y Horarios</h3>
-			
-			<div>
-				<div>
-					<p><strong>Av. Pablo Neruda 01785, Temuco</strong></p>
-					<p>Horario: Lunes a Sábado: <strong>10:00 - 20:30 hrs</strong></p>
-					
-					<div>
-						<a href="https://www.google.com/maps/search/?api=1&query=Av.+Pablo+Neruda+01785+Temuco" target="_blank" rel="noopener">Abrir en Google Maps</a>
-					</div>
+		<section id="ubicacion" class="py-20 lg:py-32 bg-gradient-to-br from-cream via-white to-accent-light/20">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<!-- Encabezado -->
+				<div class="text-center max-w-3xl mx-auto mb-16">
+					<h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-coffee-dark mb-4">
+						Ubicación y Horarios
+					</h3>
 				</div>
 				
-				<div>
-					<!-- Placeholder para mapa de Google -->
-					<p>Mapa de Google Maps</p>
+				<!-- Grid de Ubicación -->
+				<div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+					<!-- Información -->
+					<div class="bg-white p-8 lg:p-10 rounded-2xl shadow-lg space-y-6">
+						<div class="space-y-4">
+							<div class="flex items-start gap-4">
+								<div class="w-12 h-12 bg-coffee rounded-xl flex items-center justify-center flex-shrink-0">
+									<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+									</svg>
+								</div>
+								<div>
+									<p class="text-xl font-semibold text-coffee-dark">Av. Pablo Neruda 01785, Temuco</p>
+									<p class="text-gray-600 mt-1">Región de La Araucanía</p>
+								</div>
+							</div>
+							
+							<div class="flex items-start gap-4">
+								<div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center flex-shrink-0">
+									<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+									</svg>
+								</div>
+								<div>
+									<p class="text-gray-700">Lunes a Sábado</p>
+									<p class="text-2xl font-bold text-coffee">10:00 - 20:30 hrs</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="pt-6">
+							<a href="https://www.google.com/maps/search/?api=1&query=Av.+Pablo+Neruda+01785+Temuco" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3 bg-coffee text-white rounded-full font-medium hover:bg-coffee-dark transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+								</svg>
+								Abrir en Google Maps
+							</a>
+						</div>
+					</div>
+					
+					<!-- Mapa -->
+					<div class="relative">
+						<div class="aspect-video lg:aspect-square rounded-2xl shadow-lg overflow-hidden">
+							<iframe 
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.6846453796847!2d-72.59644492346086!3d-38.73933097176631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f0c0a0a0a1%3A0x1f0f0f0f0f0f0f0f!2sAv.%20Pablo%20Neruda%201785%2C%20Temuco%2C%20Araucan%C3%ADa!5e0!3m2!1ses!2scl!4v1698073200000!5m2!1ses!2scl" 
+								width="100%" 
+								height="100%" 
+								style="border:0;" 
+								allowfullscreen="" 
+								loading="lazy" 
+								referrerpolicy="no-referrer-when-downgrade"
+								class="w-full h-full">
+							</iframe>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Redes Sociales -->
-		<section>
-			<div>
-				<p>Síguenos para novedades y fotos de nuestras creaciones</p>
-				<a href="https://instagram.com/cakebox_temuco" target="_blank" rel="noopener">@cakebox_temuco</a>
-			</div>
-			<div>
-				<p>Tel: —</p>
+		<section class="py-20 lg:py-32 bg-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<div class="bg-gradient-to-br from-accent to-accent-light p-12 lg:p-16 rounded-3xl shadow-2xl text-white space-y-6">
+					<div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6">
+						<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+							<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+						</svg>
+					</div>
+					<p class="text-xl lg:text-2xl font-light">
+						Síguenos para novedades y fotos de nuestras creaciones
+					</p>
+					<a href="https://instagram.com/cakebox_temuco" target="_blank" rel="noopener" class="inline-block text-3xl lg:text-4xl font-bold hover:scale-105 transition-transform duration-300">
+						@cakebox_temuco
+					</a>
+					<div class="pt-4">
+						<p class="text-white/80 text-sm">Tel: —</p>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
 
-	<footer>
-		<p>&copy; 2025 Cakebox Temuco</p>
+	<!-- Footer -->
+	<footer class="bg-coffee-dark text-white py-8">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<p class="text-accent-light">&copy; 2025 Cakebox Temuco</p>
+				<p class="text-sm text-white/60 mt-2">Pastelería artesanal y café de especialidad</p>
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
